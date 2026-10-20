@@ -49,7 +49,8 @@ void loop() {
   // put your main code here, to run repeatedly:
   currentSensorState = digitalRead(IR_IN);
   
-  //Only trigger when the currentSensorState changes from 1 to 0
+  //Only trigger when the currentSensorState changes from 0 to 1
+  //lastSensorState ensures that only one reading can be registered
   if(currentSensorState == 1 && lastSensorState == 0){
     count = (count + 1) % 100;
     /*
