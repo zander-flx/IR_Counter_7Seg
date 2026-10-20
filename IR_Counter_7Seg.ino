@@ -50,7 +50,7 @@ void loop() {
   currentSensorState = digitalRead(IR_IN);
   
   //Only trigger when the currentSensorState changes from 1 to 0
-  if(currentSensorState == 0 && lastSensorState == 1){
+  if(currentSensorState == 1 && lastSensorState == 0){
     count = (count + 1) % 100;
     /*
     0 + 1 = 1  -> 1 % 100 = 1
